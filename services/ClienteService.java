@@ -28,4 +28,7 @@ public class ClienteService {
             }
         }
     }
+    public List<Cliente> getClientes() {
+        return clientes;
+    }
 }

@@ -12,8 +12,9 @@ public class EstoqueService {
     public void cadastrarProduto() {
         String nome = ScannerUtil.lerString("Nome do produto: ");
         int quantidade = ScannerUtil.lerInt("Quantidade: ");
+        double preco = ScannerUtil.lerDouble("Preço do produto: ");
 
-        produtos.add(new Produto(nome, quantidade));
+        produtos.add(new Produto(nome, quantidade, preco));
 
         System.out.println("Produto cadastrado com sucesso!");
     }
@@ -27,5 +28,8 @@ public class EstoqueService {
                 System.out.println(p);
             }
         }
+    }
+    public List<Produto> getProdutos() {
+        return produtos;
     }
 }
